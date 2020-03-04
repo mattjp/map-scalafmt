@@ -8,4 +8,4 @@ LABEL "maintainer"="Map"
 COPY --from=scalafmt-native /app/scalafmt /usr/local/bin/scalafmt
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["--diff --list"]
+CMD ["--mode diff --list"]
