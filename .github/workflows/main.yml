@@ -1,0 +1,12 @@
+name: Scalafmt
+on: [push, pull_request]
+
+jobs:
+  scalafmt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+        with:
+          fetch-depth: 0
+      - name: Formatting
+        uses: mattjp/map-scalafmt@master
